@@ -1,19 +1,29 @@
 class ReviewsController < ApplicationController
   def create
-  end
+    @user = User.find(params[:user_id])
+    @review = Review.new(review_params)
+    @review.user = @user
 
-  def destroy
-  end
+    if @review.save
+        redirect_to bookings_path
+    else
+      render :new
+    end
 
-  def edit
   end
 
   def index
   end
 
   def new
+    @user = User.find(params[:user_id])
+    @review = Review.new
   end
 
-  def update
+  private
+
+  def review_params
+    params.require(:review).permit(:description)
   end
+
 end
