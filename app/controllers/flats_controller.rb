@@ -1,5 +1,6 @@
 class FlatsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  before_action :set_flat, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index], raise: false
 
   def create
     @flat = Flat.new(flat_params)
@@ -15,18 +16,11 @@ class FlatsController < ApplicationController
 
   def index
     @flats = Flat.all
-    @flats = Flat.where.not(latitude: nil, longitude: nil)
-
-    @hash = Gmaps4rails.build_markers(@flats) do |flat, marker|
-      marker.lat flat.latitude
-      marker.lng flat.longitude
-      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
-    end
   end
 
   def show
     @flat = Flat.find(params[:id])
-    @flat_coordinates = { lat: @flat.latitude, lng: @flat.longitude }
+    #@flat_coordinates = { lat: @flat.lat, lng: @flat.lng }
   end
 
   def new
@@ -45,7 +39,7 @@ class FlatsController < ApplicationController
 
 
   def set_flat
-    @profile = Profile.find(params[:id])
+    @flat = Flat.find(params[:id])
   end
 
   def flat_params

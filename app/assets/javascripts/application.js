@@ -6,4 +6,4 @@
 //= require underscore
 //= require gmaps/google
 
-alert('Sadly this is static...');
+
