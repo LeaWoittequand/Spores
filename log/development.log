@@ -1,0 +1,1180 @@
+Started GET "/" for 127.0.0.1 at 2017-09-24 22:06:25 +0200
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (16.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (29.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 287ms (Views: 280.6ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-24 22:06:32 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1je1hetOammC6mryIl61nhofLWBRJWCbCCDx5o+LggM7YLzYwaBGY8gpCegCwnSGqUL/3Thpz1hopNn+0V2wIQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 22:06:32 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  Rendered shared/_navbar.html.erb (5.7ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-24 22:06:49 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (75.2ms)
+  Rendered shared/_navbar.html.erb (3.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 114ms (Views: 110.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2017-09-24 22:06:52 +0200
+Started GET "/users/auth/facebook/callback?code=AQCfZq15bzJAUB-bt_oUXdMGUTeog_p-Gz8hJZkIKe57B7KX2_iV7cV3GVMDGKW2Z44DmW7-hVE2q65znUe5GWgGPRWHZWZ1kqB6WrSFA7nKUd2P5juxpJl3e174erpJIf3UPdEUB3GTy6kCObtJ0NuVEONowJyeUnMr8STCY3N6m5JXn5flmfaLBs4FSQOcTaQ0WePqJREJXJvbTvn931IJwVxK7cq2-aT5la5BPBdyZdkz3jQ_nHNCBIyDGuOLNYaIjdo1ZP2QFwwqxDwrFLM9OlNdHZ_rmMZWqeSmKv9v8lSZKUpB3tBME1MQPAifAb8&state=6a692b16f2587894a2052abb62bd471adec53b1dc21ae0b4" for 127.0.0.1 at 2017-09-24 22:06:53 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCfZq15bzJAUB-bt_oUXdMGUTeog_p-Gz8hJZkIKe57B7KX2_iV7cV3GVMDGKW2Z44DmW7-hVE2q65znUe5GWgGPRWHZWZ1kqB6WrSFA7nKUd2P5juxpJl3e174erpJIf3UPdEUB3GTy6kCObtJ0NuVEONowJyeUnMr8STCY3N6m5JXn5flmfaLBs4FSQOcTaQ0WePqJREJXJvbTvn931IJwVxK7cq2-aT5la5BPBdyZdkz3jQ_nHNCBIyDGuOLNYaIjdo1ZP2QFwwqxDwrFLM9OlNdHZ_rmMZWqeSmKv9v8lSZKUpB3tBME1MQPAifAb8", "state"=>"6a692b16f2587894a2052abb62bd471adec53b1dc21ae0b4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "10213454979190093"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["token", "EAAC1EZBWTJE8BAABdWPQ1MYfqR3HyMmSnGrnlEQMqIMZCyvLiZAgin16aGCEZCfUT3C7R6RZBl0XV5xOe5ffDbN6i45wZC1xUGD7WrpqwOgIZAt5VOFGHkGBXKFVWECpYWn1VZBGDznKvt2dcLdxOY7DZAMO4r9QTDMRV0911efhJmQZDZD"], ["updated_at", "2017-09-24 20:06:53.789486"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 6], ["current_sign_in_at", "2017-09-24 20:06:53.793361"], ["last_sign_in_at", "2017-09-24 20:04:53.868648"], ["updated_at", "2017-09-24 20:06:53.794210"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 22:06:53 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.7ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 22:07:50 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (9.0ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-24 22:07:53 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6HjRV7O3QT69ISKONNxUm2xDm3td4+ZXCjAg3pEcYNKjn80aXXuu+QklEVb7DM6AdJvBJ+p/LaBbrKiBUxtgeg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-24 22:07:53 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-24 22:07:54 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.1ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 14:27:41 +0200
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (16.0ms)
+  Rendered shared/_navbar.html.erb (7.2ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 346ms (Views: 343.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 14:27:46 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (98.3ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 154ms (Views: 126.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2017-09-25 14:27:49 +0200
+Started GET "/users/auth/facebook/callback?code=AQAdvGozktqunLFw_no7bez93KUZ5QbQPuJgwg1eRtSYtsM-3-QTHtfQZtQzUzNPCPbJa1AluNIY0u5yhpAfjNMh9DVQTHmx02SelsRAarlRL1TspHF1gYHf2ryUAnZqUvCaJTMzdqyEqHLwZ44xSA4WswOksGakC3w9YhwDIbSLUzAsbF0KF4ekHmx2VXBiPTHcGpTE0Me327o-2BB0rlC9a1L9mOSf2VB5ioQkffJIAwS6WvIMsTCkqs-IJaKfs3X2v3E8KfAMHUd78JC9bO0lE0dOuAVr_3acPTa5dcTzNCEUpxAw-Smh33RfYUlPCjw&state=13b1a57f0c52d6d83a10580bd8874bf09f1bf3097ce8307e" for 127.0.0.1 at 2017-09-25 14:27:49 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAdvGozktqunLFw_no7bez93KUZ5QbQPuJgwg1eRtSYtsM-3-QTHtfQZtQzUzNPCPbJa1AluNIY0u5yhpAfjNMh9DVQTHmx02SelsRAarlRL1TspHF1gYHf2ryUAnZqUvCaJTMzdqyEqHLwZ44xSA4WswOksGakC3w9YhwDIbSLUzAsbF0KF4ekHmx2VXBiPTHcGpTE0Me327o-2BB0rlC9a1L9mOSf2VB5ioQkffJIAwS6WvIMsTCkqs-IJaKfs3X2v3E8KfAMHUd78JC9bO0lE0dOuAVr_3acPTa5dcTzNCEUpxAw-Smh33RfYUlPCjw", "state"=>"13b1a57f0c52d6d83a10580bd8874bf09f1bf3097ce8307e"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "10213454979190093"], ["LIMIT", 1]]
+  [1m[35m (4.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["token", "EAAC1EZBWTJE8BAPZAy8z2gu96JH9TH5JZCyZB2STCrrv3koxppnP7mv4mvzGIZCFPBtRClobaCOOzoZAMCRJClCPtGTIoqZAq9hZB0ZAPg7Q7xIkZBwygLy2scvVIh6BZA6ZCvaZCXGrkXVCkffBujf4k0H9BeclNTEaXGjle3zXTS5rCNwZDZD"], ["updated_at", "2017-09-25 12:27:49.726439"], ["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 7], ["current_sign_in_at", "2017-09-25 12:27:49.736826"], ["last_sign_in_at", "2017-09-24 20:06:53.793361"], ["updated_at", "2017-09-25 12:27:49.737621"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 33ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 14:27:49 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.3ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-25 14:31:53 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JfsTAbPBocq7dbFGnuy+87q9VShcgS+vR0mBTM1u6meQpmGYyHSL3PfeGBwSSpz+jTyDUPsLTk6BhzKpf5c9ZA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 14:31:53 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.7ms)
+  Rendered shared/_navbar.html.erb (4.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 14:31:55 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.0ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2017-09-25 14:31:57 +0200
+Started GET "/users/auth/facebook/callback?code=AQASSR4G3pD9ofsRL5swXTPpD9lcT75b2Sic-rfui-M9vE27RDphnpBrAORffVinSWS7sZBBThng8yqElkBqcgAV_-YxehMgYVKT-EaxOKUJI1CUYCEDhTlCdEi2ACLpgrexS1XNqxzTzEj44OaxV4qUCjABRVGetAq-wrnRoroviH0iDAeMTX5ZjRVgJrASdJf_wzKoxCa9SDQpyhhAZ8KGRySUP7sThdsTI14cti9f8qGauY4motNMuzwaxHXhORAHJenbXNq4e2jjXWd2-Mavu8mE3yNKBh-Q-fV_ko_8UZJJznMAx7l5uxaoRIqqQOk&state=658e1740b0f251d7ff79e92036f9be75386ca7c7205dc73b" for 127.0.0.1 at 2017-09-25 14:31:57 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQASSR4G3pD9ofsRL5swXTPpD9lcT75b2Sic-rfui-M9vE27RDphnpBrAORffVinSWS7sZBBThng8yqElkBqcgAV_-YxehMgYVKT-EaxOKUJI1CUYCEDhTlCdEi2ACLpgrexS1XNqxzTzEj44OaxV4qUCjABRVGetAq-wrnRoroviH0iDAeMTX5ZjRVgJrASdJf_wzKoxCa9SDQpyhhAZ8KGRySUP7sThdsTI14cti9f8qGauY4motNMuzwaxHXhORAHJenbXNq4e2jjXWd2-Mavu8mE3yNKBh-Q-fV_ko_8UZJJznMAx7l5uxaoRIqqQOk", "state"=>"658e1740b0f251d7ff79e92036f9be75386ca7c7205dc73b"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "10213454979190093"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["token", "EAAC1EZBWTJE8BAPM3XKZB5rwqeP8T16UAxDMxnwkytBIMj4J5cv7Xh75U1odSMCR26kVwcm8ZA6vijgpnzpYgUdPSm8IiyazoJsD2KOCsY47kknZAHOYWmDMsTtiwBrNp8t0vfxMMG3vbZBPyOmas0srZAfJTzEnp95XZCeD0ZBidwZDZD"], ["updated_at", "2017-09-25 12:31:58.024460"], ["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 8], ["current_sign_in_at", "2017-09-25 12:31:58.029299"], ["last_sign_in_at", "2017-09-25 12:27:49.736826"], ["updated_at", "2017-09-25 12:31:58.030217"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 14:31:58 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-09-25 14:39:45 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (18.0ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `picture' for #<User:0x007fb9afb456c0>:
+  activemodel (5.1.3) lib/active_model/attribute_methods.rb:432:in `method_missing'
+  app/views/shared/_navbar.html.erb:21:in `_app_views_shared__navbar_html_erb__1748263598534166221_70217808415980'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.3) lib/active_support/notifications.rb:168:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:352:in `instrument_render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:155:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/partial_renderer.rb:342:in `block in render_partial'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/partial_renderer.rb:331:in `render_partial'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/partial_renderer.rb:310:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (5.1.3) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___2506882842159598870_70217808764560'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.3) lib/active_support/notifications.rb:168:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:352:in `instrument_render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:155:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/template_renderer.rb:64:in `render_with_layout'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/template_renderer.rb:14:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/renderer.rb:23:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.3) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.3) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.3) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.3) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/opt/rbenv/versions/2.3.4/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.3) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.3) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+  omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+  omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.3) lib/rails/engine.rb:522:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/87274180ca7bd9b0/variables" for 127.0.0.1 at 2017-09-25 14:39:45 +0200
+Started GET "/" for 127.0.0.1 at 2017-09-25 14:43:05 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (13.8ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `avatar' for #<User:0x007fb9afa3da70>:
+  activemodel (5.1.3) lib/active_model/attribute_methods.rb:432:in `method_missing'
+  app/views/shared/_navbar.html.erb:21:in `_app_views_shared__navbar_html_erb__1748263598534166221_70217782065780'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.3) lib/active_support/notifications.rb:168:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:352:in `instrument_render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:155:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/partial_renderer.rb:342:in `block in render_partial'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/partial_renderer.rb:331:in `render_partial'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/partial_renderer.rb:310:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (5.1.3) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___2506882842159598870_70217780327000'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.3) lib/active_support/notifications.rb:168:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:352:in `instrument_render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:155:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/template_renderer.rb:64:in `render_with_layout'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/template_renderer.rb:14:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/renderer.rb:23:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.3) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.3) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.3) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.3) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/opt/rbenv/versions/2.3.4/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.3) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.3) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+  omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+  omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.3) lib/rails/engine.rb:522:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/9c66690483779b31/variables" for 127.0.0.1 at 2017-09-25 14:43:05 +0200
+Started GET "/" for 127.0.0.1 at 2017-09-25 14:43:21 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (43.5ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.7ms)
+
+
+
+NoMethodError - undefined method `photo' for #<User:0x007fb9b3bc5948>:
+  activemodel (5.1.3) lib/active_model/attribute_methods.rb:432:in `method_missing'
+  app/views/shared/_navbar.html.erb:21:in `_app_views_shared__navbar_html_erb__1748263598534166221_70217755666720'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.3) lib/active_support/notifications.rb:168:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:352:in `instrument_render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:155:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/partial_renderer.rb:342:in `block in render_partial'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/partial_renderer.rb:331:in `render_partial'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/partial_renderer.rb:310:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (5.1.3) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___2506882842159598870_70217754816140'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:157:in `block in render'
+  activesupport (5.1.3) lib/active_support/notifications.rb:168:in `instrument'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:352:in `instrument_render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/template.rb:155:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/template_renderer.rb:64:in `render_with_layout'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/template_renderer.rb:50:in `render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/template_renderer.rb:14:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/renderer/renderer.rb:23:in `render'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/rendering.rb:103:in `_render_template'
+  actionpack (5.1.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.1.3) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.1.3) lib/action_controller/metal/renderers.rb:141:in `render_to_body'
+  actionpack (5.1.3) lib/abstract_controller/rendering.rb:24:in `render'
+  actionpack (5.1.3) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.1.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/opt/rbenv/versions/2.3.4/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (5.1.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:29:in `cleanup_view_runtime'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.1.3) lib/action_controller/metal/implicit_render.rb:33:in `default_render'
+  actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.1.3) lib/abstract_controller/base.rb:186:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.1.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.1.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+  actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+  activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+  activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+  actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+  /usr/local/Cellar/rbenv/1.1.1/versions/2.3.4/lib/ruby/gems/2.3.0/gems/actionview-5.1.3/lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+  actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+  actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+  actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+  actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+  actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+  omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+  omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+  activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+  actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.3.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+  sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.1.3) lib/rails/engine.rb:522:in `call'
+  puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+  puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+  puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+  puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+  puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/9fd46ad780d37c3f/variables" for 127.0.0.1 at 2017-09-25 14:43:22 +0200
+Started GET "/" for 127.0.0.1 at 2017-09-25 14:43:51 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.0ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-25 14:43:54 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QHgN4lp1iM2wC1i1PYDEio6pQxH+TKMkWFn/bCR26MQjaavip3xonhZIxlhKXsm+1z8iJkuroXx/I9b6UNVifw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 14:43:54 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 14:43:56 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.4ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2017-09-25 14:43:58 +0200
+Started GET "/users/auth/facebook/callback?code=AQCN71guq6O_KUGvU3mf2Ffp0ZmnwW9eosk4cau_Kylw1W3E1esyZ_VWmbX6yyMxhXFQnE3o5DL3gYBNB8vhF7oSATZ-HhUw7gCFOnLweBwavMtFBh12Pz4wINk4TQXyyQeDoVd-tJRn6K2ET3Xhw6RU2ycnPw_gVh0Qo0cKWA8tY1lPAM54LKZudAlRsffBAd05rMvXU4K3Wy31ujMNIs1802dPWkJ0ZnCeGLlHMBomnqV1tL9g97Jo2NBB6Zw60NweIx6YnIU2XdiVr0XK0kN1ZLmxdXxid5Udenprd9ZmsKb2fjBU8X0bK0V3JjA9nBM&state=40d9f61eb1d4e917557bb8b29694d45999f06ed38465e0c7" for 127.0.0.1 at 2017-09-25 14:43:58 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCN71guq6O_KUGvU3mf2Ffp0ZmnwW9eosk4cau_Kylw1W3E1esyZ_VWmbX6yyMxhXFQnE3o5DL3gYBNB8vhF7oSATZ-HhUw7gCFOnLweBwavMtFBh12Pz4wINk4TQXyyQeDoVd-tJRn6K2ET3Xhw6RU2ycnPw_gVh0Qo0cKWA8tY1lPAM54LKZudAlRsffBAd05rMvXU4K3Wy31ujMNIs1802dPWkJ0ZnCeGLlHMBomnqV1tL9g97Jo2NBB6Zw60NweIx6YnIU2XdiVr0XK0kN1ZLmxdXxid5Udenprd9ZmsKb2fjBU8X0bK0V3JjA9nBM", "state"=>"40d9f61eb1d4e917557bb8b29694d45999f06ed38465e0c7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "10213454979190093"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["token", "EAAC1EZBWTJE8BAB2TW73cUdODnqvRQx8ZBCsqUhgzWjOrc29zeemsf4yrglzCWVWYXJSgQn6k5lMZBuFFr1lbEH9fz1jXnaXNoIfdpf2dahC3BHeRqwlCh4tHcZBlCIa1j2gZA1TVbKSVlkfRSogZCEGThC20bMIf1v8qhiQa0ygZDZD"], ["updated_at", "2017-09-25 12:43:58.523455"], ["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 9], ["current_sign_in_at", "2017-09-25 12:43:58.527884"], ["last_sign_in_at", "2017-09-25 12:31:58.029299"], ["updated_at", "2017-09-25 12:43:58.528742"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 14:43:58 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.6ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:37:20 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (38.0ms)
+  Rendered shared/_flashes.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 86ms (Views: 77.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:37:25 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (5.1ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-25 15:37:27 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zoO7G/rtqjrAeRVA4pmXGflqImjRqv7fs29eTfGRHNEZ47BUciuYO30Y/RiMhjE+qNx8RiwzM7CrTlXQaKTvkA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:37:27 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:37:28 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.1ms)
+  Rendered shared/_navbar.html.erb (3.2ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2017-09-25 15:37:30 +0200
+Started GET "/users/auth/facebook/callback?code=AQAf_mAbCIDac-x3Y0I1xCoF0BX9n610UP2aVSuwCt7L69Aq2oLda63NkzgyZYh54QI-nbeVCUeyncg1yf4c-aPgoO12zq_c2ETnv_0S2yLRqYFdvgOmLlisJ9YdyEYFp3dx8abTALYOR3Sh_dtrKOLEhEDMAmL_RIb2lFjhJq8FeinIXljavB5sCyIOtGJ3BeyZ_rWHEiSCLYl2MjWOuGT3KyC6XrGuVdx36j7ki8Mw8PM4kHq0lhbFVM9Z_sfeJ08oSDTN9reHaD2zhnxnzHLRPAKcl9R970hxUsItn1V9D8H_cJgn-if6AN3CSWxoM9A&state=dbc596f39619b28fc15220a188fc4b0ac3bc7706b7c763ac" for 127.0.0.1 at 2017-09-25 15:37:30 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAf_mAbCIDac-x3Y0I1xCoF0BX9n610UP2aVSuwCt7L69Aq2oLda63NkzgyZYh54QI-nbeVCUeyncg1yf4c-aPgoO12zq_c2ETnv_0S2yLRqYFdvgOmLlisJ9YdyEYFp3dx8abTALYOR3Sh_dtrKOLEhEDMAmL_RIb2lFjhJq8FeinIXljavB5sCyIOtGJ3BeyZ_rWHEiSCLYl2MjWOuGT3KyC6XrGuVdx36j7ki8Mw8PM4kHq0lhbFVM9Z_sfeJ08oSDTN9reHaD2zhnxnzHLRPAKcl9R970hxUsItn1V9D8H_cJgn-if6AN3CSWxoM9A", "state"=>"dbc596f39619b28fc15220a188fc4b0ac3bc7706b7c763ac"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "10213454979190093"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["token", "EAAC1EZBWTJE8BAASC58jIl8hJKZBQ0hXvykNSLwWhDRQqFA30xZB7lt7goNuzPO6eIbGh6WzRU7ZAqZChNpikIHMJHULGkPzrAQtZCgqGaSvToaaIsW0orU1ZBAZCPAZBX8zkffcNNC5iL9IZCgZC8VXSyWNTFfiG13SX6j3K3VEZByEXQZDZD"], ["updated_at", "2017-09-25 13:37:31.206101"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 10], ["current_sign_in_at", "2017-09-25 13:37:31.209485"], ["last_sign_in_at", "2017-09-25 12:43:58.527884"], ["updated_at", "2017-09-25 13:37:31.210288"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:37:31 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.9ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-25 15:38:00 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CN7jnOmZdRA83G67lUFpZJJzlyAb/NyqulCHGKVEzmwxJfLWCTZS9GQE0zJ6Q4w0pyrayyjek88l766CA7fIBw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:38:00 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:38:01 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.4ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:38:54 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.6ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 117ms (Views: 64.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:38:56 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.1ms)
+  Rendered shared/_navbar.html.erb (2.8ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (2.9ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:41:37 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.6ms)
+  Rendered shared/_navbar.html.erb (3.0ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 84ms (Views: 55.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:42:18 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.3ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:44:20 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.5ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:44:21 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.3ms)
+  Rendered shared/_navbar.html.erb (3.2ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:44:22 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.3ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:46:10 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.9ms)
+  Rendered shared/_navbar.html.erb (3.6ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:46:11 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.8ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:46:12 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.1ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:46:47 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.4ms)
+  Rendered shared/_navbar.html.erb (4.1ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 4870ms (Views: 4869.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:47:14 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.8ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 3197ms (Views: 3195.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:47:24 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  Rendered shared/_navbar.html.erb (3.3ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:47:25 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.1ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2017-09-25 15:47:30 +0200
+Started GET "/users/auth/facebook/callback?code=AQC3E8LRu8KRQcP7rYbmBpohsKLlhVzDrmjRS8RWIkYRMmD7wcbjUO1GaHZlL9-UlJxJ8mqS-r5uiv22L6FpvvjYUn4NDP6o5ymaHsXdiaDAPW9Y6zvhuCVOqv58bTJ4GGeD6x-6EECXXIjjQutg96sMCduX_mqBlQcUgFfvqCei70kvexwuZO6hqhUdU8mT8J5lXRg5vk5Za3Av02FLkYyI6OVVyYqKl0AL5rZPHAtR9Nqv6er1-aYneumke65iibpv_H2qpYvRmELX-Rj08rrBvc0fCQE0SRRHb_XEiWXnQNoSBie-HcC-Fil3y-H_uq0&state=a8db97509ad6ace767bf9359a71035469e6b3b60f6284c36" for 127.0.0.1 at 2017-09-25 15:47:31 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQC3E8LRu8KRQcP7rYbmBpohsKLlhVzDrmjRS8RWIkYRMmD7wcbjUO1GaHZlL9-UlJxJ8mqS-r5uiv22L6FpvvjYUn4NDP6o5ymaHsXdiaDAPW9Y6zvhuCVOqv58bTJ4GGeD6x-6EECXXIjjQutg96sMCduX_mqBlQcUgFfvqCei70kvexwuZO6hqhUdU8mT8J5lXRg5vk5Za3Av02FLkYyI6OVVyYqKl0AL5rZPHAtR9Nqv6er1-aYneumke65iibpv_H2qpYvRmELX-Rj08rrBvc0fCQE0SRRHb_XEiWXnQNoSBie-HcC-Fil3y-H_uq0", "state"=>"a8db97509ad6ace767bf9359a71035469e6b3b60f6284c36"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "10213454979190093"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["token", "EAAC1EZBWTJE8BAJY2ZARDgRU00WuzsfAoEt71SAJ1JH0aegDmJ0KTEOrlT2b2nH6fyjonOVAq2j4pALyaZC6iumLX2ZBx5YwDF9g6QDp26pnh8llj6y10JoFGfXD4unZCeCozRZCkjZB0l0KL4HRyUVdulGaeINS2TQoCggRNFZBYAZDZD"], ["updated_at", "2017-09-25 13:47:31.313846"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 11], ["current_sign_in_at", "2017-09-25 13:47:31.316740"], ["last_sign_in_at", "2017-09-25 13:37:31.209485"], ["updated_at", "2017-09-25 13:47:31.317388"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:47:31 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (3.9ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-25 15:47:34 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UtjWKacJAG36Rp7ZV6gqSoSc/MIIcAn58bMxs4vKyw2OAAs9bEx9V4/EBZpPeEGLDAXjDIN+EkGz28g9nyckNg=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:47:34 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:47:36 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.3ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-09-25 15:47:38 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.5ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:47:47 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:47:52 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (33.3ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:48:21 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.8ms)
+  Rendered shared/_navbar.html.erb (3.9ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 3519ms (Views: 3517.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-09-25 15:48:51 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.5ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-09-25 15:51:18 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.7ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2017-09-25 15:51:34 +0200
+Started GET "/users/auth/facebook/callback?code=AQCnEixoMwMeuXIlmC-_FP2QhTZrvYTzfq8X_2q6Zzv52IMMG6cKmsfyN_wrHkG2DheYb_2b506PQcFKTI5V6bIX0SodhngfjjSjejisv_Xi5cAMfMdeathk5YoCZJ7DntBuMQFlGX54qSgOnJIC78jBGdYxRz4BBsGxaC-4a1YZFlw5VckS4eEgzXXAu1PIToYDvznKgjoMMi-ay8RzPbK9YycD1w91N6TvtQHMOm8VitgyzPEJ21eqDpmuPCO25ISraANFv718hC83hnrME3RxUF42UHAZz-qHrcn1OcAhUi5OhrbLqA3pP2AgZUWCptU&state=be79f1b094de48a422ed7a83da62af50de27ea3586d37e16" for 127.0.0.1 at 2017-09-25 15:51:34 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQCnEixoMwMeuXIlmC-_FP2QhTZrvYTzfq8X_2q6Zzv52IMMG6cKmsfyN_wrHkG2DheYb_2b506PQcFKTI5V6bIX0SodhngfjjSjejisv_Xi5cAMfMdeathk5YoCZJ7DntBuMQFlGX54qSgOnJIC78jBGdYxRz4BBsGxaC-4a1YZFlw5VckS4eEgzXXAu1PIToYDvznKgjoMMi-ay8RzPbK9YycD1w91N6TvtQHMOm8VitgyzPEJ21eqDpmuPCO25ISraANFv718hC83hnrME3RxUF42UHAZz-qHrcn1OcAhUi5OhrbLqA3pP2AgZUWCptU", "state"=>"be79f1b094de48a422ed7a83da62af50de27ea3586d37e16"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "10213454979190093"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["token", "EAAC1EZBWTJE8BAAZCqT7FwBrPPig7rOSmGv5nzCtre5LAfVLXRnojalAhMG6Sx2BRZBbEmo2ZCZBRqJgbvoKrZCXQkWa4MHpqJVqj3ZBrFrl7X88M5ka8N6RtZCodPZAeDamaxqaTB5DGw4xpeFpf0JVb3FKeUTeqARLZB7e6918QDhgZDZD"], ["updated_at", "2017-09-25 13:51:34.699213"], ["id", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 12], ["current_sign_in_at", "2017-09-25 13:51:34.703428"], ["last_sign_in_at", "2017-09-25 13:47:31.316740"], ["updated_at", "2017-09-25 13:51:34.704066"], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:51:34 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.1ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-25 15:51:37 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"x0gCAcdDjNdS+0taoupe7xKTZjdGnLdB9cOaUvriNUtRUwen6L2ntcQwVySJXFq87Wq8Ei599A1cJZ5cOVXuPw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:51:37 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:51:39 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.9ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-09-25 15:51:45 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.1ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-09-25 15:52:04 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CwINba3hZlE2F4jEfd+oGOZYW/Nz2B9j4PU/btzRg0emr5o8ZiNx8G3Wy5B5LTBXxeRXL2tYTMCIQ5OG7ie3fw==", "user"=>{"first_name"=>"Lea", "last_name"=>"WWWW", "email"=>"ww@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ww@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "ww@gmail.com"], ["encrypted_password", "$2a$11$gzt7ge71A4h9mzaIUqyRguPBjwjLJRn01MdnzbH4HeRIaHKgojxe6"], ["created_at", "2017-09-25 13:52:04.389859"], ["updated_at", "2017-09-25 13:52:04.389859"], ["first_name", "Lea"], ["last_name", "WWWW"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-09-25 13:52:04.393880"], ["last_sign_in_at", "2017-09-25 13:52:04.393880"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2017-09-25 13:52:04.394467"], ["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 203ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:52:04 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered shared/_navbar.html.erb (4.2ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-09-25 15:52:18 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"upPJvSd/DxSzhWi5JNmRvolRy+/T8yUf+iBSntMf1wIXPl7s7L0YtehEK+0gKwnxqu3HM8tzdrySlv524enjOg=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:52:18 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:52:20 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.1ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-09-25 15:52:26 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.3ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 15:53:38 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-09-25 15:54:21 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (63.5ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 100ms (Views: 98.9ms | ActiveRecord: 0.0ms)
+
+
