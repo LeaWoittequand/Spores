@@ -7770,3 +7770,45 @@ Processing by FlatsController#show as HTML
 Completed 200 OK in 65ms (Views: 58.3ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-29 11:13:01 +0200
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  Rendered shared/_navbar.html.erb (33.8ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 518ms (Views: 515.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flats" for 127.0.0.1 at 2017-09-29 11:13:03 +0200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (1.3ms)[0m  [1m[34mSELECT  "flats".* FROM "flats" ORDER BY "flats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered flats/index.html.erb within layouts/application (33.9ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 89ms (Views: 59.7ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/flats/1" for 127.0.0.1 at 2017-09-29 11:13:07 +0200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT  "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Flat Load (0.0ms)[0m  [1m[34mSELECT  "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navbar.html.erb (3.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 52.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/flats" for 127.0.0.1 at 2017-09-29 11:15:24 +0200
+Processing by FlatsController#index as HTML
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT  "flats".* FROM "flats" ORDER BY "flats"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered flats/index.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navbar.html.erb (3.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
