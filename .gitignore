@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 .bundle
 log/*.log
 tmp/**/*
