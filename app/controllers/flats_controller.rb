@@ -15,7 +15,7 @@ class FlatsController < ApplicationController
   end
 
   def index
-    @flats = Flat.all
+    @flats = Flat.where.not(lat: nil, lng: nil)
   end
 
   def show
