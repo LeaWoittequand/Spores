@@ -5,6 +5,7 @@ class ReviewsController < ApplicationController
     set_review
     @review = Review.new(review_params)
     @review.flat = @flat
+    @review.user = current_user
     if @review.save
       redirect_to flat_path(@flat)
     else
@@ -21,7 +22,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:description, :picture)
+    params.require(:review).permit(:description, :picture, :user, :flat)
   end
 
   def set_review
