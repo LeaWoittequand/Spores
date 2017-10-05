@@ -15,7 +15,13 @@ class FlatsController < ApplicationController
   end
 
   def index
-    @flats = Flat.all
+    @flats = Flat.where.not(lat: nil, lng: nil)
+
+    @hash = Gmaps4rails.build_markers(@flats) do |flat, marker|
+      marker.lat flat.lat
+      marker.lng flat.lng
+      marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    end
   end
 
   def show
