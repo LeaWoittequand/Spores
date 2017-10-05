@@ -15,9 +15,12 @@
 .card {
   position: relative;
 }
-body { margin: 0; }
-#map {
-  display: flex;
-  height: 65vh;
-  width: 100%;
-}
+
+.review {
+  p {
+  font-family: Raleway, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  }
+

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <div class="form-login">
+
+        <h2>Your Review</h2>
+
+        <%= simple_form_for [@flat, @review] do |f| %>
+
+        <div class="form-inputs">
+          <%= f.input :description,label: false, required: true, placeholder: 'Your review' %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Add a review", class: "btn btn-yours" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
