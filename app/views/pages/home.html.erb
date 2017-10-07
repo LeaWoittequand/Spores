@@ -1,5 +1,5 @@
 
-<div class= "banner middle-pic" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1472377723522-4768db9c41ce?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=');">
+<div class= "banner middle-pic" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1469384631720-500a19caf2be?dpr=1&auto=compress,format&fit=crop&w=2850&h=&q=80&cs=tinysrgb&crop=');">
   <div class="banner-content">
     <h1></i>Spores Homes</h1>
     <p class="big p"> Well Being and Learning Homes </p>
@@ -7,5 +7,23 @@
 </div>
 </div>
 
-
+<div class="container" id="home-giders">
+  <h5 class= "text-center text-space"> How was your Experience at Spores ? </h5>
+  <div class="row">
+  <% first_feedback = true %>
+    <% @feedbacks.each do |gider| %>
+      <div class="col-xs-12 col-sm-6 col-md-4 <%= 'hidden-xs' unless first_feedback.present? %>">
+       <div class="testimonial">
+                        <div class="pic"><%= image_tag gider[:picture] %> </div>
+                        <h3 class="testimonial-title"><%= gider[:name] %></h3>
+                        <small class="post"><%= gider[:location] %></small>
+                        <p class="description">
+                            <%= gider[:description][0..285] %>...
+                        </p>
+                    </div>
+      </div>
+    <% first_feedback = false %>
+    <% end %>
+  </div>
+</div>
 
