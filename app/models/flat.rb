@@ -1,7 +1,11 @@
 class Flat < ApplicationRecord
+  geocoded_by :full_address, :latitude  => :lat, :longitude => :lng
+  after_validation :geocode, if: :address_changed?
+
   has_many :reviews
   has_many :bookings
 
-  validates :description, presence: true
-
+  def full_address
+    "#{address}, #{postcode}, #{city}"
+  end
 end

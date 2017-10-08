@@ -32,6 +32,16 @@ h1, h2, h3{
   font-weight: bold;
 }
 
+h4 {
+  font-family: Raleway, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #999999;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 h5 {
   font-family: Raleway, Helvetica, sans-serif;
   text-align: center;
@@ -49,12 +59,5 @@ h6 {
   font-weight: bold;
 }
 
-.banner {
-  background-size: cover;
-/*  background :linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
-*/height: 80vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-}
+
+

@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :home
+
   def home
     @feedbacks = [{name: "Sergey",
   description: "  Spores House is the place that you will never forget! Such a unique atmosphere of unity and sharing; I believe that the lifeview which Allan and his Team promote via Spores is a close and inevitable future of our society! It impress a lot and drive us to spread this spirit around the world" ,

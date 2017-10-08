@@ -1,2 +1,55 @@
-<h1>Flats#show</h1>
-<p>Find me in app/views/flats/show.html.erb</p>
+
+<h4>Cullera</h4>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+      var coord = <%= raw @flat_coordinates.to_json %>;
+      alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
+    });
+  <% end %>
+<% end %>
+
+
+<div class="container">
+  <div class="flat_content">
+    <div class="row">
+      <div class="flat_infos" align="center">
+        <p><%= @flat %></p>
+        <%= link_to "Je book", new_flat_booking_path(@flat), class: "btn btn-yours" %>
+      </div>
+    </div>
+  </div>
+  <div class="flat_content">
+    <div class="row text-center">
+      <div class="col-xs-12">
+        <h4 align="center">Info</h4>
+      </div>
+    </div>
+  </div>
+  <div class="flat_content">
+  <h4 align="center">Review</h4>
+    <div class="reviews_flat" align="center">
+      <div class="review-content" align="center">`
+        <% @flat.reviews.each do |review| %>
+          <%= render 'reviews_flat', review: review %>
+        <% end %>
+        <%= link_to 'Add a review', new_flat_review_path(@flat), class: "btn btn-yours" %>
+      </div>
+    </div>
+  </div>
+  <div class="back_homes" align="center">
+    <%= link_to 'Back to Homes', flats_path, class: "btn btn-success" %>
+  </div>
+</div>
+
+
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+  $(document).ready(function() {
+  var coord = <%= raw @profile_coordinates.to_json %>;
+  alert(profile.lat);
+});
+<% end %>
+<% end %>

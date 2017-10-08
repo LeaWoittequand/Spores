@@ -1,0 +1,27 @@
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+  border-radius: 10px;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+.card {
+  position: relative;
+}
+
+.review {
+  p {
+  font-family: Raleway, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  }
+}
+
