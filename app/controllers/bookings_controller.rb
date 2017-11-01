@@ -2,15 +2,19 @@ class BookingsController < ApplicationController
    before_action :set_booking, only:[:edit, :show]
 
   def create
-     if booking_params['begin_date'] > booking_params['end_date'] || booking_params['end_date'].blank? ||booking_params['end_date'] < Time.now
-      flash[:alert] = "Dates invalides"
-      return redirect_to flat_path(Flat.find(booking_params[:flat_id]))
-    end
-
-    user = current_user
-    @booking = user.bookings.new(booking_params)
+    @flat = Flat.find(params[:flat_id])
+    @booking = Booking.new(booking_params)
+    # @booking.flat = Flat.find(params[:flat_id])
+    # @booking.user = current_user
+    # if @booking.save
+    #   redirect_to flat_path(@flat)
+    # else
+    #   render :new
+    # end
+    @booking.flat = @flat
+    @booking.user = current_user
     if @booking.save
-      redirect_to booking_path
+      redirect_to flat_path(@flat)
     else
       render :new
     end
@@ -22,15 +26,14 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @flat = Flat.find(params[:flat_id])
     @booking = Booking.new
   end
-
-
 
   private
 
   def booking_params
-    params.require(:booking).permit(:begin_date, :end_date, :member_of_people)
+    params.require(:booking).permit(:begin_date, :end_date, :member_of_people, :user_id, :flat_id)
   end
 
 end

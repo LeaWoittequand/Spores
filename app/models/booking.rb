@@ -1,7 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :user
 
-  validates :description, presence: true
   validates :begin_date, presence: true
   validates :end_date, presence: true
   validates :member_of_people, presence: true
