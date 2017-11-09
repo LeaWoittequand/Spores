@@ -20,6 +20,8 @@
         <!-- AJOUT DE LA CONDITION, SINON PLANTAGE CAR PICTURE NIL -->
           <% if current_user.facebook_picture_url %>
             <%= image_tag current_user.facebook_picture_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <% else %>
+            <%= image_tag "http://via.placeholder.com/35x35", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <% end %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>

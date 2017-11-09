@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
   belongs_to :user
+  belongs_to :flat
 
-  validates :description, presence: true
   validates :begin_date, presence: true
   validates :end_date, presence: true
   validates :member_of_people, presence: true
