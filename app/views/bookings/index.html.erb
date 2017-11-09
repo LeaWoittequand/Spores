@@ -1,2 +1,12 @@
 <h1>Bookings#index</h1>
 <p>Find me in app/views/bookings/index.html.erb</p>
+
+<ul>
+  <% @bookings.each do |booking| %>
+    <li style="color: black;"><p>NEW BOOKING</p></li>
+    <li style="color: black;">booking id: <%= booking.id %></li>
+    <li style="color: black;">nb: <%= booking.member_of_people %></li>
+    <li style="color: black;">user id: <%= booking.user.id %></li>
+    <li style="color: black;">flat: <%= booking.flat.id %> </li>
+  <% end %>
+</ul>

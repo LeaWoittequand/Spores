@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
    before_action :set_booking, only:[:edit, :show]
 
   def create
-    @flat = Flat.find(params[:flat_id])
+    @flat = Flat.find(params[:booking][:flat_id])
     @booking = Booking.new(booking_params)
     # @booking.flat = Flat.find(params[:flat_id])
     # @booking.user = current_user
@@ -11,14 +11,22 @@ class BookingsController < ApplicationController
     # else
     #   render :new
     # end
-    @booking.flat = @flat
+    # @booking.flat = @flat
+    # @booking.user = current_user
+    # if @booking.save
+    #   redirect_to flat_path(@flat)
+    # else
+    #   render :new
+    # end
     @booking.user = current_user
+    @booking.flat = @flat
     if @booking.save
-      redirect_to flat_path(@flat)
+      redirect_to flat_path(@flat), notice: "you successfully sent a request for this flat, a member of our team will back to you ! "
     else
-      render :new
+     render :new
     end
   end
+
 
   def index
     @bookings = Booking.all.where(user: current_user)
@@ -35,5 +43,10 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:begin_date, :end_date, :member_of_people, :user_id, :flat_id)
   end
+
+  def set_booking
+    @flat = Flat.find(params[:flat_id])
+  end
+
 
 end
