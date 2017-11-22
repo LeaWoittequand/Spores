@@ -12,34 +12,7 @@
       <!-- Links when logged in -->
       <%= link_to "Donation", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
-<% if user_signed_in? %>
-      <!-- Avatar with dropdown menu -->
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-        <!-- AJOUT DE LA CONDITION, SINON PLANTAGE CAR PICTURE NIL -->
-          <% if current_user.facebook_picture_url %>
-            <%= image_tag current_user.facebook_picture_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <% else %>
-            <%= image_tag "http://via.placeholder.com/35x35", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <% end %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li>
-              <%= link_to root_path do %>
-                <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    <% else %>
-      <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <% end %>
+
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
@@ -54,3 +27,4 @@
     </div>
   </div>
 </div>
+
