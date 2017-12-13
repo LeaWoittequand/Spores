@@ -279,4 +279,5 @@ Devise.setup do |config|
     info_fields: 'email, first_name, last_name',
     image_size: 'square',  # 50x50, guaranteed ratio
     secure_image_url: true
+  config.secret_key = Figaro.env.devise_secret_key if Rails.env.production?
 end
