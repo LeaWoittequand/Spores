@@ -279,5 +279,5 @@ Devise.setup do |config|
     info_fields: 'email, first_name, last_name',
     image_size: 'square',  # 50x50, guaranteed ratio
     secure_image_url: true
-  config.secret_key = ENV['ff70e26d819f3ab44bf9a9b86fe254db60844cf15d586dc521cd52fb8391c2537d681cf4d659097e83e1b73efffb51cc583e5ba650eedc9a5d3b70a340cb736f'] if Rails.env.production?
+
 end
