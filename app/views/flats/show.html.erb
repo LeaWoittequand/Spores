@@ -15,7 +15,7 @@
 
   <div class="col-xs-12 descriptionhome">
        <h4 align="center"> Valencia | Cullera Beach </h4>
-     <h5> Welcome to where Spores homes was born. Bitch !!
+     <h5> Welcome to where Spores Homes was born.
       </h5>
      </div>
 
@@ -34,22 +34,40 @@
      </div>
 
      <div class="col-md-6 descriptionhome">
-      <div class="banner-flat">
           <%= image_tag "http://www.cronorunner.com/competitions/386/editions/444/banner.jpg"%>
-      </div>
-          <%= link_to "Book", new_flat_booking_path(@flat), class: "btn btn-yours" %>
+          <%= link_to "Book", "https://app.acuityscheduling.com/schedule.php?owner=13398936", class: "btn btn-yours" %>
      </div>
    </div>
  </div>
 
+<div class="container">
+ <div class="col-md-3 descriptionhome2">
+  <%= link_to image_tag("http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513870020/Capture_d_e%CC%81cran_2017-12-21_a%CC%80_16.26.41_ilbqwt.png") , "https://www.instagram.com/p/BZysoSiFYIH/?hl=en&taken-by=spores_homes"%>
+  </div>
+  <div class="col-md-3 descriptionhome2">
+  <%= link_to image_tag("http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513869472/Capture_d_e%CC%81cran_2017-12-21_a%CC%80_16.16.41_zs98de.png") , "https://www.instagram.com/p/BW7mA4Hl7DJ/?hl=en&taken-by=spores_homes"%>
+  </div>
+  <div class="col-md-3 descriptionhome2">
+  <%= link_to image_tag("http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513869957/Capture_d_e%CC%81cran_2017-12-21_a%CC%80_16.19.05_rxwawq.png") , "https://www.instagram.com/p/BZDTWsql9Gd/?hl=en&taken-by=spores_homes" %>
+  </div>
+  <div class="col-md-3 descriptionhome2">
+  <%= link_to image_tag("http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513870117/Capture_d_e%CC%81cran_2017-12-21_a%CC%80_16.28.25_a9usjv.png") , "https://www.instagram.com/p/BcDBtcOFhqZ/?hl=en&taken-by=spores_homes" %>
+  </div>
+
+</div>
+
+
+
  <div class="flat_content">
- <h4 align="center">Review</h4>
+ <h4 align="center">Reviews</h4>
    <div class="reviews_flat" align="center">
      <div class="review-content" align="center">`
        <% @flat.reviews.each do |review| %>
          <%= render 'reviews_flat', review: review %>
        <% end %>
-       <%= link_to 'Add a review', new_flat_review_path(@flat), class: "btn btn-yours" %>
+   <!--     <div align="center">
+       <%= link_to 'Add a review', new_flat_review_path(@flat), class: "btn btn-yours"%>
+     </div> -->
      </div>
    </div>
  </div>
