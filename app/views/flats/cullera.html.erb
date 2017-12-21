@@ -1,0 +1,86 @@
+cullera.html.erb
+
+
+<% content_for(:after_js) do %>
+ <%= javascript_tag do %>
+   $(document).ready(function() {
+     var coord = <%= raw @flat_coordinates.to_json %>;
+     alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
+   });
+ <% end %>
+<% end %>
+
+<div class="container">
+
+  <div class="col-xs-12 descriptionhome">
+       <h4 align="center"> Valencia | Cullera Beach </h4>
+     <h5> Welcome to where Spores Homes was born.
+      </h5>
+     </div>
+
+
+
+<div class="flat_content">
+   <div class="row text-center">
+
+      <div class="col-md-6 descriptionhome ">
+     <strong> Story </strong>
+      <p> Initially an home that was supposed to be lost as a consequence of a family divorce, Allan decided to rebuy it and bet on his dream of an Home open to the world where creativity can be unleashed and individualidy reduced. March 2017 Spores was born. </p>
+     <strong> Environment </strong>
+      <p> The home is at the dawn of the mountains with dozens of kms of seas by 10 min walking. There is also good hills to practice hiking or road cycling. There is 12 people capacity, from family rooms to hammocks. In the core of a traditional spanish village. 30 minutes from Valencia by train.<p>
+        <p> This Spores Homes is on Stage 4 : Advanced. </p>
+       <p> It means that the creativity challenged is orientated around design, functionalities and self learning set ups. </p>
+     </div>
+
+     <div class="col-md-6 descriptionhome">
+          <%= image_tag "http://www.cronorunner.com/competitions/386/editions/444/banner.jpg"%>
+          <%= link_to "Book", "https://app.acuityscheduling.com/schedule.php?owner=13398936", class: "btn btn-yours" %>
+     </div>
+   </div>
+ </div>
+
+<div class="container">
+ <div class="col-md-3 descriptionhome2">
+  <%= link_to image_tag("http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513870020/Capture_d_e%CC%81cran_2017-12-21_a%CC%80_16.26.41_ilbqwt.png") , "https://www.instagram.com/p/BZysoSiFYIH/?hl=en&taken-by=spores_homes"%>
+  </div>
+  <div class="col-md-3 descriptionhome2">
+  <%= link_to image_tag("http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513869472/Capture_d_e%CC%81cran_2017-12-21_a%CC%80_16.16.41_zs98de.png") , "https://www.instagram.com/p/BW7mA4Hl7DJ/?hl=en&taken-by=spores_homes"%>
+  </div>
+  <div class="col-md-3 descriptionhome2">
+  <%= link_to image_tag("http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513869957/Capture_d_e%CC%81cran_2017-12-21_a%CC%80_16.19.05_rxwawq.png") , "https://www.instagram.com/p/BZDTWsql9Gd/?hl=en&taken-by=spores_homes" %>
+  </div>
+  <div class="col-md-3 descriptionhome2">
+  <%= link_to image_tag("http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513870117/Capture_d_e%CC%81cran_2017-12-21_a%CC%80_16.28.25_a9usjv.png") , "https://www.instagram.com/p/BcDBtcOFhqZ/?hl=en&taken-by=spores_homes" %>
+  </div>
+
+</div>
+
+
+
+ <div class="flat_content">
+ <h4 align="center">Reviews</h4>
+   <div class="reviews_flat" align="center">
+     <div class="review-content" align="center">`
+       <% @flat.reviews.each do |review| %>
+         <%= render 'reviews_flat', review: review %>
+       <% end %>
+   <div align="center">
+     <!--   <%= link_to 'Add a review', new_flat_review_path(@flat), class: "btn btn-yours"%> -->
+     </div>
+     </div>
+   </div>
+ </div>
+ <div class="back_homes" align="center">
+   <%= link_to 'Back to Homes', flats_path, class: "btn btn-success" %>
+ </div>
+</div>
+
+
+<% content_for(:after_js) do %>
+ <%= javascript_tag do %>
+ $(document).ready(function() {
+ var coord = <%= raw @profile_coordinates.to_json %>;
+ alert(profile.lat);
+});
+<% end %>
+<% end %>
