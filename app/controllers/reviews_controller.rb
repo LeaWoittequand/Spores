@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  # before_action :set_review, only: [:new, :create]
+  before_action :set_review, only: [:new, :create]
 
   def create
     set_review
