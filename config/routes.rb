@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount ForestLiana::Engine => '/forest'
   resources :flats, except: [:destroy] do
     resources :reviews, except: [:destroy, :edit]
     resources :bookings
