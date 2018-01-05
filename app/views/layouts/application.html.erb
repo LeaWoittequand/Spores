@@ -36,12 +36,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>TODO</title>
+    <title> <%= yield(:title) %></title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= favicon_link_tag 'SporesLogo.png' %>
 
   </head>
+
+  <% content_for :title, "Title for specific page" %>
+
   <body>
 
     <%= render 'shared/navbar' %>
