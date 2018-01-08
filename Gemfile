@@ -28,6 +28,10 @@ source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end
 
+group :assets do
+         gem 'turbo-sprockets-rails3'
+ end
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
