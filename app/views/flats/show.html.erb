@@ -1,4 +1,6 @@
-<% content_for :title, "Spores - flat.name " %>
+
+<% content_for :title, "Spores" %>
+
 
 <!-- <h4> Valencia | Cullera Beach </h4>
 -->
@@ -15,9 +17,8 @@
 <div class="container">
 
   <div class="col-xs-12 descriptionhome">
-       <h4 align="center"> Morgon | French Vineyards </h4>
-     <h5> Welcome to where we make the Spores' Wine .
-      </h5>
+       <h4 align="center"><%= @flat.name %></h4>
+     <h5><%= @flat.baseline %></h5>
      </div>
 
 
@@ -26,36 +27,35 @@
    <div class="row text-center">
 
       <div class="col-md-6 descriptionhome ">
-     <strong> Story </strong>
-      <p> That's the beginning of Spores' expansion. Many of our users were requesting us that they wanted more Spores Homes but also ready to contribute financially for them.
-      <p> In the other hand Spores did not demonstrate yet that they were financially sustainable as they wanted to encourage social entrepreneurs. </p>
-      <p> Two questions came to our mind : Why 20 peoples can't own an Home ? Why can't we become producers for something linked to local culture ? </p>
-      <p> We learnt laws and build an SCI which allowed Multiple Ownership of French Property. We stimulate our neurons and ends with France and Wine Makers. </p>
-      <p> The home is surrounded by wine grasps, you are at the epicenter of the wine culture and french gastronomy. There is also calm roads for road cycling and parcs to hike. There will be 40+ people capacity, from family rooms to huts, tents and hammocks. In the core of a traditional french village. 30 minutes from Lyon by train.<p>
-        <p> This Spores Homes is on Stage 1 : In funding.</p>
-       <p> It means that if you want to be one of the rare owners of Spores Homes discover now without waiting our Co owning plans. Less than 5 seats remaining !!! </p>
-       <p> Home will start from scratch. </p>
+     <p> <b>Story </b></p>
+      <p><%= @flat.description %></p>
      </div>
 
      <div class="col-md-6 descriptionhome">
-          <%= image_tag "http://proprietes.lefigaro.fr/indicateur/images/PDF/CMS/articles/126165342-1499344234.12.jpg"%>
-          <%= link_to "Book", new_flat_booking_path(@flat), class: "btn btn-yours" %>
+          <%= image_tag @flat.picture%>
+
+        <% if Flat.find(1) %>
+          <%= link_to 'Je book', new_flat_booking_path(@flat), class: "btn btn-yours" %>
+        <% else %>
+        <%= link_to 'Apply to Co-owning', class: "btn btn-yours" %>
+        <% end %>
+
      </div>
    </div>
  </div>
 
 <div class="container">
  <div class="col-md-3 descriptionhome2">
-  <%= image_tag"http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513882532/armando-castillejos-144076_xarrpk.jpg"%>
+  <%= image_tag @flat.portfolio1%>
   </div>
   <div class="col-md-3 descriptionhome2">
-  <%= image_tag"http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513883125/quino-al-442692_ogqqla.jpg"%>
+  <%= image_tag @flat.portfolio2%>
   </div>
   <div class="col-md-3 descriptionhome2">
-  <%= image_tag"http://www.telegraph.co.uk/content/dam/Travel/leadAssets/34/92/BeaujolaisNouveau_3492513a-xlarge.jpg" %>
+  <%= image_tag @flat.portfolio3%>
   </div>
   <div class="col-md-3 descriptionhome2">
-  <%= image_tag"http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513882334/bianca-isofache-400477_rayd72.jpg" %>
+  <%= image_tag @flat.portfolio4 %>
   </div>
 
 </div>
