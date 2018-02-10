@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.flat = @flat
     if @booking.save
-      redirect_to flat_path(@flat), notice: "you successfully sent a request for this flat, a member of our team will back to you ! "
+      redirect_to flat_path(@flat), notice: "Booking successfully sent !!! One member of our team will come back to you within 24h to finalize your check in."
     else
      render :new
     end

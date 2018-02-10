@@ -1,4 +1,11 @@
-<div class="map_box">
-  <h6><%= flat.address %></h6>
-  <%= link_to "Details", flat_path(flat), target: :blank, class: "btn btn-yours" %>
+<div class="infowindow">
+
+  <%= image_tag "https://3freetree.files.wordpress.com/2017/04/sporeslogo.png?w=236", class: "avatar" %>
+
+  <div>
+  <p class= "black"><%= flat.address %></p>
+
+
+  <%= link_to "Book", flat_path(flat), target: :blank, class: "btn btn-yours" %>
+  </div>
 </div>
