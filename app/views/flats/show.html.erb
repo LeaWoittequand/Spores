@@ -27,16 +27,23 @@
    <div class="row text-center">
 
       <div class="col-md-6 descriptionhome ">
-     <p> <b>Story </b></p>
+      <div>
       <p><%= @flat.description %></p>
+      </div>
+      <div>
+      <p><%= @flat.environment %></p>
+    </div>
+    <div>
+      <p><%= @flat.status %></p>
+    </div>
      </div>
 
      <div class="col-md-6 descriptionhome">
           <%= image_tag @flat.picture%>
         <% if @flat.name == "Morgon" %>
-          <%= link_to 'Apply to Co-owning', 'https://drive.google.com/file/d/1TPx6O-5UzUABJe0h_dcewTWePP6hI2Ul/view?usp=sharing', class: "btn btn-yours" %>
+          <%= link_to 'Apply to Co-owning', 'https://medium.com/@allan.ballester/co-propri%C3%A9taire-dune-spores-homes-5969d2ced8b1', class: "btn btn-yours" %>
         <% else %>
-        <%= link_to 'Je book', new_flat_booking_path(@flat), class: "btn btn-yours" %>
+        <%= link_to 'Book', new_flat_booking_path(@flat), class: "btn btn-yours" %>
         <% end %>
 
      </div>
