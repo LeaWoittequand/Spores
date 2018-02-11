@@ -3,7 +3,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <div class="form-login">
 
         <h2>Sign up</h2>
@@ -17,6 +17,9 @@
           <%= f.input :email, label: false, required: true, autofocus: true, placeholder: 'Enter your Email' %>
           <%= f.input :password, label: false, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: 'Choose a password' %>
           <%= f.input :password_confirmation, label: false, required: true, placeholder: 'Confirm your password' %>
+             <%= f.input :skill, required: true, :collection => ['Artistical', 'Digital','Home Design', 'Green', 'Maker', 'Marketing', 'Musician', 'Other'], label: "Which kind of talent do you get ?"%>
+          <%= f.input :phone, label: false, required: true, placeholder: 'Phone, do not forget your country code before !!' %>
+
         </div>
 
         <div class="form-actions">
