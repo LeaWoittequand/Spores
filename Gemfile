@@ -23,6 +23,8 @@ gem "coffee-rails"
 gem "gmaps4rails"
 gem 'forest_liana'
 
+gem 'webpacker', '~> 3.2'
+
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
