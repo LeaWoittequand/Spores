@@ -1,11 +1,11 @@
 <div class="infowindow">
 
-  <%= image_tag "https://3freetree.files.wordpress.com/2017/04/sporeslogo.png?w=236", class: "avatar" %>
+  <%= image_tag flat.picture, class: "avatar" %>
 
   <div>
-  <p class= "black"><%= flat.address %></p>
+  <p class= "black"><%= flat.name %></p>
 
 
-  <%= link_to "Book", flat_path(flat), target: :blank, class: "btn btn-yours" %>
+  <%= link_to "Show", flat_path(flat), target: :blank, class: "btn btn-yours" %>
   </div>
 </div>
