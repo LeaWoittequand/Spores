@@ -1,4 +1,4 @@
-<%- if devise_mapping.omniauthable? %>
+<!--- <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
     <%= link_to omniauth_authorize_path(resource_name, provider) do %>
     <button class="loginBtn loginBtn--facebook btn-fb">
@@ -6,7 +6,7 @@
     </button>
     <% end %>
   <% end -%>
-<% end -%>
+<% end -%> -->
 
 <div class= "sign-in-text-account">
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
