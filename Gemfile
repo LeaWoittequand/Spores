@@ -24,6 +24,8 @@ gem "gmaps4rails"
 gem 'forest_liana'
 
 gem 'webpacker', '~> 3.2'
+gem "letter_opener", group: :development
+gem 'postmark-rails'
 
 
 source 'https://rails-assets.org' do
