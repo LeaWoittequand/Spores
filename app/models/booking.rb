@@ -1,4 +1,5 @@
 class Booking < ApplicationRecord
+  after_create :send_newbooking_email
   belongs_to :user
   belongs_to :flat
 
@@ -20,4 +21,11 @@ class Booking < ApplicationRecord
       errors.add :begin_date, "must be after today"
     end
   end
+
+  private
+
+  def send_newbooking_email
+    UserMailer.newbooking(user, self).deliver_now
+  end
+
 end
