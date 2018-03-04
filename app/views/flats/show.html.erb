@@ -1,5 +1,5 @@
 
-<% content_for :title, "Spores" %>
+<% content_for :title, "" %>
 
 
 <!-- <h4> Valencia | Cullera Beach </h4>
@@ -19,6 +19,14 @@
   <div class="col-xs-12 descriptionhome">
        <h4 align="center"><%= @flat.name %></h4>
      <h5><%= @flat.baseline %></h5>
+     <div class="col-md-12 descriptionhome" align="center">
+        <% if @flat.name == "Morgon" %>
+          <%= link_to 'Apply to Co-owning', 'https://www.kickstarter.com/projects/allanballester/1289042900?ref=440370&token=54b4a564', class: "btn btn-yours" %>
+        <% else %>
+        <%= link_to 'Book here', new_flat_booking_path(@flat), class: "btn btn-yours" %>
+        <% end %>
+
+          </div>
      </div>
 
 
@@ -40,11 +48,7 @@
 
      <div class="col-md-6 descriptionhome">
           <%= image_tag @flat.picture%>
-        <% if @flat.name == "Morgon" %>
-          <%= link_to 'Apply to Co-owning', 'https://www.kickstarter.com/projects/allanballester/1289042900?ref=440370&token=54b4a564', class: "btn btn-yours" %>
-        <% else %>
-        <%= link_to 'Book', new_flat_booking_path(@flat), class: "btn btn-yours" %>
-        <% end %>
+
 
      </div>
    </div>
@@ -61,15 +65,13 @@
   <%= image_tag @flat.portfolio3%>
   </div>
   <div class="col-md-3 descriptionhome2">
-  <%= image_tag @flat.portfolio4 %>
+    <%= link_to image_tag("http://res.cloudinary.com/dk9kkvy1o/image/upload/v1520012998/instafollow_ax1d9g.png"), "https://www.instagram.com/spores_homes/?hl=en", target: :_blank %>
   </div>
 
 </div>
 
 
-
  <div class="flat_content">
- <h4 align="center">Reviews</h4>
    <div class="reviews_flat" align="center">
      <div class="review-content" align="center">`
        <% @flat.reviews.each do |review| %>
@@ -82,7 +84,7 @@
    </div>
  </div>
  <div class="back_homes" align="center">
-   <%= link_to 'Back to Spores Homes', flats_path, class: "btn btn-success" %>
+  <%= link_to 'Back to Spores Homes', flats_path, class: "btn btn-success" %>
  </div>
 </div>
 
