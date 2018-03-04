@@ -2,11 +2,7 @@
 
   <div class="row review">
     <div class="cols-xs-12 col-sm-4 col-md-2 col-lg-2 user-infos">
-      <% if current_user.facebook_picture_url %>
-      <%= image_tag current_user.facebook_picture_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-      <% else %>
       <%= image_tag "https://signup.trybooking.com/images/user-hero-blue.png", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-      <% end %>
 
       <p align="center"><%= link_to review.user.first_name  , flat_path(@flat) %>  <%= review.created_at %></p>
       <p> Skills : <%= review.user.skill %> <p>
