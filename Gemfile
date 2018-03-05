@@ -22,9 +22,11 @@ gem "geocoder"
 gem "coffee-rails"
 gem "gmaps4rails"
 gem 'forest_liana'
+gem 'postmark-rails'
 
 gem 'webpacker', '~> 3.2'
 
+gem "letter_opener", group: :development
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
