@@ -9,7 +9,7 @@ class UserMailer < ApplicationMailer
     @user = user
     @booking = booking
 
-    mail(to: "allan.ballester@decathlon.com", subject: 'Welcome to Le Wagon')
+    mail(to: "allan.ballester@decathlon.com", subject: 'New booking from #{@user.first_name}')
   end
 end
 
