@@ -25,7 +25,6 @@ class BookingsController < ApplicationController
     else
      render :new
     end
-    UserMailer.newbooking(@booking.user, @booking).deliver_now
   end
 
 
