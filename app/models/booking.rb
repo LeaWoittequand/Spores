@@ -35,7 +35,7 @@ class Booking < ApplicationRecord
   end
 
   def send_review_email
-    UserMailer.review(user, self).deliver_now
+    UserMailer.review(user, self).deliver_later(wait_until: 7.days.from_now)
   end
 
 
