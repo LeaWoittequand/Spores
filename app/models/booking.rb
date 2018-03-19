@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
   after_create :send_newbooking_email
   after_create :send_confirm_booking_email
-  after_create :send_review
+  after_create :send_review_email
   belongs_to :user
   belongs_to :flat
 
@@ -34,7 +34,7 @@ class Booking < ApplicationRecord
     UserMailer.confirm_booking(user, self).deliver_now
   end
 
-  def send_review
+  def send_review_email
     UserMailer.review(user, self).deliver_now
   end
 
