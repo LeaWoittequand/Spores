@@ -20,7 +20,7 @@
        <h4 align="center"><%= @flat.name %></h4>
      <h5><%= @flat.baseline %></h5>
      <div class="col-md-12 descriptionhome" align="center">
-        <% if @flat.name == "Morgon" %>
+        <% if @flat.name == "La Orotava" %>
           <%= link_to 'Apply to Co-owning', 'https://www.kickstarter.com/projects/allanballester/1289042900?ref=440370&token=54b4a564', class: "btn btn-yours" %>
         <% else %>
         <%= link_to 'Book here', new_flat_booking_path(@flat), class: "btn btn-yours" %>
