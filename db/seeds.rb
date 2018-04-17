@@ -27,16 +27,16 @@ Flat.create(
   name: "La Orotava",
   lat: 28.3884,
   lng: -16.5248,
-  description: "That's the beginning of 'Spores expansion'. Many of our users were requesting us that they wanted more Spores Homes but also ready to contribute financially for them. We simply thought : Why 20 peoples can't own an Home in order to expand ? We learnt laws and build a proper entreprise that can host multiple owners. We opened a collaborative shareholding being able to contribute with 1 or 5%."
-  environment: "The home is in the beautiful Tenerife's Canary Island. It's down the Teide, highest peak in Spain surrounded by unique wildlife. The Island propose everything for a retreat : the way you breathe, can hear the silence, the birds whistles. It's also a wonderful playfield to reenergise. Between seas and mountains it brings all the nature and seas activities : hiking, sailing, scuba diving, cycling, swimming, yoga.."
+  description: "That's the beginning of 'Spores expansion'. Many of our users were requesting us that they wanted more Spores Homes but also ready to contribute financially for them. We simply thought : Why 20 peoples can't own an Home in order to expand ? We learnt laws and build a proper entreprise that can host multiple owners. We opened a collaborative shareholding being able to contribute with 1 or 5%.",
+  environment: "The home is in the beautiful Tenerife Canary Island. It's down the Teide, highest peak in Spain surrounded by unique wildlife. The Island propose everything for a retreat : the way you breathe, can hear the silence, the birds whistles. It's also a wonderful playfield to reenergise. Between seas and mountains it brings all the nature and seas activities : hiking, sailing, scuba diving, cycling, swimming, yoga..",
   status: "This Spores Homes is on Stage 1 : In funding. It means that if you want to be one of the rare co-owners of Spores Homes discover now without waiting our Co owning plans. Less than 5 seats remaining !!! Home will start from scratch.",
   baseline: "Welcome to the where expansion began .",
-  picture: 'https://ksr-ugc.imgix.net/assets/020/200/124/4b73ed3d43e8560bc0e9136ebd608b7a_original.png?crop=faces&w=1024&h=576&fit=crop&v=1523469090&auto=format&q=92&s=ed882c9695a48d5648a8010f2e20b74',
+  picture: 'http://res.cloudinary.com/dk9kkvy1o/image/upload/v1523900331/4b73ed3d43e8560bc0e9136ebd608b7a_original_a5gj6k.png',
   address: 'La Orotava',
   city: "La Orotava",
   postcode: "38311",
-  portfolio1: "http://res.cloudinary.com/dk9kkvy1o/image/upload/c_scale,h_136,w_204/v1513882532/armando-castillejos-144076_xarrpk.jpg",
-  portfolio2: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513883125/quino-al-442692_ogqqla.jpg",
-  portfolio3: "http://www.telegraph.co.uk/content/dam/Travel/leadAssets/34/92/BeaujolaisNouveau_3492513a-xlarge.jpg",
+  portfolio1: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1523955518/d32ec76612f6b27cff92e790a852a5e3_original_uv675i.png",
+  portfolio2: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1523954313/Capture_d_e%CC%81cran_2018-04-17_a%CC%80_10.37.46_gqhwo2.png",
+  portfolio3: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1523954226/30bbf1995a69c21c980fea2ac4930463_original_xkff2d.png",
   portfolio4: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513882334/bianca-isofache-400477_rayd72.jpg"
 )
