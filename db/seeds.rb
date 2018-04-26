@@ -45,7 +45,7 @@ Flat.create(
   name: "St Maurice Près Pionsat",
   lat: 46.064863,
   lng: 2.602381,
-  description: "Indeed Bruno was the first one to demonstrate that Spores is also world citizen and owner's reponsibility. He recently acquired a old house in the Auvergne's region and decide to raise it collaboratively. The idea of Spores for him was an unique chance also to bring people skills and knowledges on : carpenty, agriculture, painting any manufacturing side and obviously french culture and create strong moment and memories between creative minds ",
+  description: "Indeed Bruno was the first one to demonstrate that Spores is also world citizen and owner's reponsibility. He recently acquired a old house in the Auvergne's region and decided to raise it collaboratively. The idea of Spores for him was an unique chance also to bring people skills and knowledges on : carpenty, agriculture, painting any manufacturing side and obviously french culture and create strong moment and memories between creative minds ",
   environment: "The home is in a peaceful village in the middle of France. It's surrounded by nature. There is the perfect spot for retreat and to self reflexion. It's surrounded by wildlife park, the Creuze river and many plains. Farming athmosphere. ",
   status: "This Spores Homes is on Stage 2 : Under works. It means that the Home get the physiological needs ensured, wifi and is at the beginning of the construction improvement. Perfect time to learn the most. ",
   baseline: "Welcome to the first Spores Homes opened by a citizen !!.",
