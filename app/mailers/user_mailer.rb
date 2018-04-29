@@ -16,14 +16,14 @@ class UserMailer < ApplicationMailer
     @user = user
     @booking = booking
 
-    mail(to: @user.email, subject: ' #{user.first_name}, Welcome to Spores Homes !')
+    mail(to: @user.email, subject: " #{user.first_name}, Welcome to Spores Homes !")
   end
 
    def review(user, booking)
     @user = user
     @booking = booking
 
-    mail(to: @user.email, subject: ' #{user.first_name}, how was your experience ?!')
+    mail(to: @user.email, subject: " #{user.first_name}, how was your experience ?!")
   end
 
 end
