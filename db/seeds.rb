@@ -40,3 +40,21 @@ Flat.create(
   portfolio3: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1523954226/30bbf1995a69c21c980fea2ac4930463_original_xkff2d.png",
   portfolio4: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513882334/bianca-isofache-400477_rayd72.jpg"
 )
+
+Flat.create(
+  name: "St Maurice Près Pionsat",
+  lat: 46.064863,
+  lng: 2.602381,
+  description: "Indeed Bruno was the first one to demonstrate that Spores is also world citizen and owner's reponsibility. He recently acquired a old house in the Auvergne's region and decided to raise it collaboratively. The idea of Spores for him was an unique chance also to bring people skills and knowledges on : carpenty, agriculture, painting any manufacturing side and obviously french culture and create strong moment and memories between creative minds ",
+  environment: "The home is in a peaceful village in the middle of France. It's surrounded by nature. There is the perfect spot for retreat and to self reflexion. It's surrounded by wildlife park, the Creuze river and many plains. Farming athmosphere. ",
+  status: "This Spores Homes is on Stage 2 : Under works. It means that the Home get the physiological needs ensured, wifi and is at the beginning of the construction improvement. Perfect time to learn the most. ",
+  baseline: "Welcome to the first Spores Homes opened by a citizen !!.",
+  picture: 'http://res.cloudinary.com/dk9kkvy1o/image/upload/v1524741648/Capture_d_e%CC%81cran_2018-04-26_a%CC%80_13.20.17_sxnhzp.png',
+  address: 'St Maurice Près Pionsat',
+  city: "St Maurice Près Pionsat",
+  postcode: "63330",
+  portfolio1: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1524741494/Capture_d_e%CC%81cran_2018-04-26_a%CC%80_13.17.09_wibidf.png",
+  portfolio2: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1523954313/Capture_d_e%CC%81cran_2018-04-17_a%CC%80_10.37.46_gqhwo2.png",
+  portfolio3: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1524741464/Capture_d_e%CC%81cran_2018-04-26_a%CC%80_13.17.02_hcoxe9.png",
+  portfolio4: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513882334/bianca-isofache-400477_rayd72.jpg"
+)
