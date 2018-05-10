@@ -49,12 +49,12 @@ Flat.create(
   environment: "The home is in a peaceful village in the middle of France. It's surrounded by nature. There is the perfect spot for retreat and to self reflexion. It's surrounded by wildlife park, the Creuze river and many plains. Farming athmosphere. ",
   status: "This Spores Homes is on Stage 2 : Under works. It means that the Home get the physiological needs ensured, wifi and is at the beginning of the construction improvement. Perfect time to learn the most. ",
   baseline: "Welcome to the first Spores Homes opened by a citizen !!.",
-  picture: 'http://res.cloudinary.com/dk9kkvy1o/image/upload/v1524741648/Capture_d_e%CC%81cran_2018-04-26_a%CC%80_13.20.17_sxnhzp.png',
+  picture: 'http://res.cloudinary.com/dk9kkvy1o/image/upload/c_scale,w_1361/v1525295611/IMGP0038_rzjywk.jpg',
   address: 'St Maurice Près Pionsat',
   city: "St Maurice Près Pionsat",
   postcode: "63330",
-  portfolio1: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1524741494/Capture_d_e%CC%81cran_2018-04-26_a%CC%80_13.17.09_wibidf.png",
-  portfolio2: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1523954313/Capture_d_e%CC%81cran_2018-04-17_a%CC%80_10.37.46_gqhwo2.png",
-  portfolio3: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1524741464/Capture_d_e%CC%81cran_2018-04-26_a%CC%80_13.17.02_hcoxe9.png",
+  portfolio1: "http://res.cloudinary.com/dk9kkvy1o/image/upload/c_scale,w_2033/v1525295599/IMGP0043_zwedef.jpg",
+  portfolio2: "http://res.cloudinary.com/dk9kkvy1o/image/upload/c_scale,w_1854/v1525295671/IMGP1568_ngprqt.jpg",
+  portfolio3: "http://res.cloudinary.com/dk9kkvy1o/image/upload/c_scale,w_1884/v1525295707/IMGP1607_idzxyc.jpg",
   portfolio4: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513882334/bianca-isofache-400477_rayd72.jpg"
 )
