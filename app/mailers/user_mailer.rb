@@ -6,6 +6,7 @@ class UserMailer < ApplicationMailer
     @flat = booking.flat
 
     mail(to: "allan.ballester@decathlon.com", subject: "New booking from #{user.first_name} for #{@flat.name}!")
+
   end
 
   def confirm_booking(user, booking)
