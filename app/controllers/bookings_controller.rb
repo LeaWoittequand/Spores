@@ -18,8 +18,8 @@ class BookingsController < ApplicationController
     # else
     #   render :new
     # end
-    @booking.user = current_user
     @booking.flat = @flat
+    @booking.user = current_user
     if @booking.save
       redirect_to flat_path(@flat), notice: "Booking successfully sent !!! One member of our team will come back to you within 24h to finalize your check in."
     else
