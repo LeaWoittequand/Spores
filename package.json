@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.2.2"
+    "intl-tel-input": "^12.1.15"
   },
   "devDependencies": {
     "webpack": "^3.10.0",
