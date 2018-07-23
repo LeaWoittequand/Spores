@@ -24,20 +24,20 @@ Flat.create(
 )
 
 Flat.create(
-  name: "La Orotava",
-  lat: 28.3884,
-  lng: -16.5248,
-  description: "That's the beginning of 'Spores expansion'. Many of our users were requesting us that they wanted more Spores Homes but also ready to contribute financially for them. We simply thought : Why 20 peoples can't own an Home in order to expand ? We learnt laws and build a proper entreprise that can host multiple owners. We opened a collaborative shareholding being able to contribute with 1 or 5%.",
-  environment: "The home is in the beautiful Tenerife Canary Island. It's down the Teide, highest peak in Spain surrounded by unique wildlife. The Island propose everything for a retreat : the way you breathe, can hear the silence, the birds whistles. It's also a wonderful playfield to reenergise. Between seas and mountains it brings all the nature and seas activities : hiking, sailing, scuba diving, cycling, swimming, yoga..",
-  status: "This Spores Homes is on Stage 1 : In funding. It means that if you want to be one of the rare co-owners of Spores Homes discover now without waiting our Co owning plans. Less than 5 seats remaining !!! Home will start from scratch.",
-  baseline: "Welcome to the where expansion began .",
-  picture: 'http://res.cloudinary.com/dk9kkvy1o/image/upload/v1523900331/4b73ed3d43e8560bc0e9136ebd608b7a_original_a5gj6k.png',
-  address: 'La Orotava',
-  city: "La Orotava",
-  postcode: "38311",
-  portfolio1: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1523955518/d32ec76612f6b27cff92e790a852a5e3_original_uv675i.png",
-  portfolio2: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1523954313/Capture_d_e%CC%81cran_2018-04-17_a%CC%80_10.37.46_gqhwo2.png",
-  portfolio3: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1523954226/30bbf1995a69c21c980fea2ac4930463_original_xkff2d.png",
+  name: "Villa de Arico",
+  lat: 28.183726,
+  lng: -16.524926,
+  description: "That's the beginning of Spores expansion and test. After deep research we found that this home was totally abandonned. Why do we have to waste that treasure in this planet ? We decided to give it life back !!!  ",
+  environment: "The home is in the uplands of the beautiful village of Villa de Arico. This spot is at the core of canyons climbing ecosystem which will contribute from beginners to experts to enjoy this practice in a natural environment. It's also biking, hiking and trail running paradise too. Beach is at 30 min by bike mountain descent. Surrounded by beautiful permaculture and collaborative social business athmosphere.",
+  status: "This Spores Homes is on Stage 2 . Book and help to set up the basics : water, electricity, bedroom, bathroom and collaborative kitchen. If you get green thumbed you can also work on the vast field around to start planting a collaborative garden that will benefit guest and citizens.",
+  baseline: "The first completely abandonned home.",
+  picture: 'http://res.cloudinary.com/dk9kkvy1o/image/upload/v1531237990/Screen_Shot_2018-07-10_at_17.50.38_fucdgs.png',
+  address: 'Villa de Arico',
+  city: "Villa de Arico",
+  postcode: "38580",
+  portfolio1: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1531237756/Screen_Shot_2018-07-10_at_17.48.49_udsuqs.png",
+  portfolio2: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1531238204/Screen_Shot_2018-07-10_at_17.52.43_f9acnq.png",
+  portfolio3: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1531238180/Screen_Shot_2018-07-10_at_17.54.39_u8unlx.png",
   portfolio4: "http://res.cloudinary.com/dk9kkvy1o/image/upload/v1513882334/bianca-isofache-400477_rayd72.jpg"
 )
 
