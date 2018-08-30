@@ -1,7 +1,7 @@
 class Booking < ApplicationRecord
   after_create :send_newbooking_email
   after_create :send_confirm_booking_email
-  after_create :send_review_email
+
   belongs_to :user
   belongs_to :flat
 
@@ -37,6 +37,4 @@ class Booking < ApplicationRecord
   def send_review_email
     UserMailer.review(user, self).deliver_later(wait_until: :end_date.from_now)
   end
-
-
 end
