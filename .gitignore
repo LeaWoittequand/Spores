@@ -14,6 +14,8 @@
 /tmp/.
 /log/.keep
 /tmp/.keep
+tmp/*
+tmp:.
 
 /node_modules
 /yarn-error.log
@@ -28,3 +30,6 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+
+
+*.DS_Store
