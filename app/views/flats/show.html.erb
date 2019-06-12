@@ -22,8 +22,7 @@
      <div class="col-md-12 descriptionhome" align="center">
         <% if @flat.name == "La Orotava" %>
           <%= link_to 'Apply to Co-owning', 'https://www.kickstarter.com/projects/allanballester/1289042900?ref=440370&token=54b4a564', class: "btn btn-yours" %>
-          <% elsif @flat.name == "Cullera" %>
-          <%= link_to 'Book here', 'https://calendly.com/sporeshomes', class: "btn btn-yours" %>
+
         <% else %>
         <%= link_to 'Book here', new_flat_booking_path(@flat), class: "btn btn-yours" %>
         <% end %>
