@@ -3,7 +3,7 @@ ruby '2.4.1'
 
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
-gem 'pg'
+gem 'pg', '~> 0.18'
 gem 'puma'
 gem 'rails', '5.1.3'
 gem 'redis'
@@ -36,8 +36,8 @@ source 'https://rails-assets.org' do
 end
 
 group :assets do
-         gem 'turbo-sprockets-rails3'
- end
+  gem 'turbo-sprockets-rails3'
+end
 
 group :development, :test do
   gem 'pry-byebug'
